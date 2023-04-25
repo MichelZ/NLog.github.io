@@ -1,9 +1,9 @@
 name: 'Build Wiki'
 
 on: 
-  - workflow_dispatch:
-  - repository_dispatch:
-      types: [build-wiki]
+  repository_dispatch:
+    types: [build-wiki]
+  workflow_dispatch:
 
 jobs:
   check:
