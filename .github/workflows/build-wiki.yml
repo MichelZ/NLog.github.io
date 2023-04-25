@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 0
     - name: Checkout wiki repo
@@ -22,8 +22,8 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.11'
-    - run: pip install -r /_wiki/requirements.txt
-    - run: mkdocs build --config-file /_wiki/mkdocs.yml
+    - run: pip install -r _wiki/requirements.txt
+    - run: mkdocs build --config-file _wiki/mkdocs.yml
     - name: Commit files
       run: |
         cd ./wiki
